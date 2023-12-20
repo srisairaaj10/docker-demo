@@ -8,7 +8,7 @@ node {
    }
 
    stage('Test') {
-      def myTestContainer = docker.image('node:14')  // Use a Node.js version compatible with your project
+      def myTestContainer = docker.image('node:4.6')  // Use a Node.js version compatible with your project
       myTestContainer.pull()
       myTestContainer.inside {
          sh 'npm install'
